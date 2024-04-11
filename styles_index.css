@@ -1,5 +1,11 @@
 /* Styles for the home page (index.html) */
+@import url('https://fonts.googleapis.com/css2?family=Chakra+Petch:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap');
 
+*{
+    margin: 0;
+    padding: 0;
+    font-family: "chakra petch", sans-serif;
+}
 body {
     font-family: Arial, sans-serif;
     background-color: #f3f3f3;
@@ -8,21 +14,37 @@ body {
 }
 
 header {
-    background-color: #2c3e50;
-    color: #fff;
-    padding: 20px 0;
-    text-align: center;
+    width: 100%;
+    height: auto;
+    background-color: #c0740a;
+    color: #7f2d01;
+    text-align: left;
+    padding-left: 2vw;
+    padding-bottom: 1vh;
+    padding-top: 1vh;
+    box-sizing: border-box;
+    position: sticky;
+    top: 0px;
+}
+@media (max-width: 600px) {
+    header {
+        text-align: center;
+    }
 }
 
 h1 {
     margin: 0;
     font-size: 32px;
 }
+h1>img {
+    width: 60px;
+    vertical-align: middle;
+}
 
 nav ul {
     list-style-type: none;
-    padding: 0;
-    margin: 20px 0;
+    /* padding: 0; */
+    margin-top: 1.3vh;
 }
 
 nav ul li {
@@ -32,24 +54,63 @@ nav ul li {
 
 nav ul li a {
     text-decoration: none;
-    color: #fff;
+    color: #7f2d01;
     font-size: 18px;
 }
 
 nav ul li a:hover {
-    color: #ccc;
+    text-decoration: underline;
+    color: #7f2d01;
+    text-shadow: 0 0 5px #ffffff,
+        0 0 10px #ffffff,
+        0 0 20px #ffffff,
+        0 0 30px #ffffff,
+        0 0 40px #ffffff,
+        0 0 55px #ffffff,
+        0 0 70px #ffffff;
 }
 
+
 main {
-    padding: 20px;
+    background: #000;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    gap: 5vh;
+    padding-top: 5vh;
+    padding-left: 3vw;
+    padding-bottom: 5vh;
 }
 
 footer {
-    background-color: #2c3e50;
-    color: #fff;
+    background-color: #c0740a;
+    color: #7f2d01;
     text-align: center;
     padding: 10px 0;
-    position: fixed;
+    position: sticky;
     bottom: 0;
     width: 100%;
+}
+
+main > div >h2 {
+    font-size: 190%;
+    margin-bottom: 10px;
+}
+h2::after {
+    content: "";
+    display: block;
+    width: 50%;
+    height: 5px;
+    background-color: orange;
+    margin-top: 5px;
+    border-radius: 5px;
+}
+main > div > h2:hover {
+    text-shadow: 0 0 5px #817979,
+        0 0 10px #464343,
+        0 0 20px #ffffff,
+        0 0 30px #ffffff,
+        0 0 40px #ffffff,
+        0 0 55px #ffffff,
+        0 0 70px #ffffff;
 }
